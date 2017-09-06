@@ -35,7 +35,8 @@ select category.name, category.discount, brend.name, price from product
  	inner join product_type on product_type.id = product.produc_type_id where price <= 9000;
 
 
-select brend.name, category.name, category.alias_name, category.discount, product_type.name, price from product
+select brend.name as 'Бренд', category.name as 'Категория', category.alias_name as 'Псевдоним', 
+category.discount as 'Скидка', product_type.name as 'Тип товара', price as 'Цена' from product
 	inner join product_type on product.produc_type_id = product_type.id
     inner join brend on brend.id = product.brend_id
     -- inner join product_type on product_type.id = product.produc_type_id;
